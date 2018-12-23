@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html><head>
+	<title>지령(指令)</title>
+	<style type="text/css">
+	@import url('https://fonts.googleapis.com/css?family=Song+Myung');
+	@FONT-FACE{
+	font-family: "휴먼엑스포", "한컴돋움", "SM견출고딕 Std Regular", "SM견출명조 Std Regular";
+	src: url('HMFMMUEX_0.ttf','HDOTUM_0.ttf','SMKGothicStd-Regular.otf','SMKMyungJoStd-Regular.otf');
+	}
+		
+		body{background-color:black; overflow:hidden}
+		
+		#whiteBut{width:60px; height:60px; position:absolute; top:15px; left:1440px; border-radius:50%; background-color:red; z-index:999}
+		
+		#blueBut{width:60px; height:60px; position:absolute; top:90px; left:1440px; border-radius:50%; background-color:blue; z-index:999; animation:morse 20s linear infinite}
+		
+		#yelloBut{width:60px; height:60px; position:absolute; top:165px; left:1440px; border-radius:50%; background-color:yellow; z-index:999;}
+		
+		#blackBox{width:1520px; height:710px; position:absolute; background-color:black; background-size:121% z-index:998}
+		
+		#imgBox{width:1520px; height:710px; position:absolute; background-color:black; background-size:121% z-index:-999}
+		
+		#ziry{position: absolute; top:-30px; left:0; margin-left:10px; font-family: 'SM견출명조 Std Regular', 'Song Myung'; font-size: 100px;font-weight:700; color:white; z-index:997; mix-blend-mode:difference}
+		#ziry2{width:500px; height:500px;position: absolute; margin-left:10px; top: 160px; left:0; font-family: 'SM견출명조 Std Regular', 'Song Myung'; font-size: 50px; font-weight:500; line-height:70px;  z-index:998; mix-blend-mode:difference}
+		
+		#sa{width:600px; height:500px;position: absolute; top: 220px; left:340px; font-family: 'SM견출명조 Std Regular', 'Song Myung'; font-size: 600px; font-weight:500; line-height:70px; mix-blend-mode:soft-light; animation: rota1 10s linear infinite}
+		#gong{width:120px; height:500px;position: absolute; top: 60px; left:1290px; font-family: 'SM견출명조 Std Regular', 'Song Myung'; font-size: 200px; font-weight:500; line-height:70px; mix-blend-mode:soft-light; animation: rota2 1s linear infinite}
+		#oo{width:200px; height:200px;position: absolute; top: 540px; left:1150px; font-family: 'SM견출명조 Std Regular', 'Song Myung'; font-size: 400px; font-weight:500; line-height:0px; mix-blend-mode:soft-light; animation: rota3 6s linear infinite}
+		#il{width:50px; height:50px;position: absolute; top: 320px; left:940px; font-family: 'SM견출명조 Std Regular', 'Song Myung'; font-size: 100px; font-weight:500; line-height:70px; mix-blend-mode:soft-light; animation: rota4 0.3s linear infinite}
+		#ill{width:150px; height:300px;position: absolute; top: 600px; left:800px; font-family: 'SM견출명조 Std Regular', 'Song Myung'; font-size: 300px; font-weight:500; line-height:70px; mix-blend-mode:soft-light; animation: rota5 2s linear infinite}
+		
+		#oImage{mix-blend-mode:difference;}
+		#morse{width:0px; height:0px}
+		
+		@keyframes rota1 {
+			from{transform:rotateY(0deg)}
+			to {transform:rotateY(360deg)}
+		}
+		@keyframes rota2 {
+			from{transform:rotateY(0deg)}
+			to {transform:rotateY(-360deg)}
+		}
+		@keyframes rota3 {
+			from{transform:rotateY(0deg)}
+			to {transform:rotateY(360deg)}
+		}
+		@keyframes rota4 {
+			from{transform:rotateY(0deg)}
+			to {transform:rotateY(360deg)}
+		}
+		@keyframes rota5 {
+			from{transform:rotateY(0deg)}
+			to {transform:rotateY(360deg)}
+		}
+		
+		@keyframes morse {
+			0%{background-color:rgba(0,0,255,0)}
+			3%{background-color:rgba(0,0,255,0)}
+			3.01%{background-color:rgba(0,0,255,0)}
+			3.99%{background-color:rgba(0,0,255,0)}
+			4%{background-color:rgba(0,0,255,1)}
+			
+			7%{background-color:rgba(0,0,255,1.00)}
+			7.01%{background-color:rgba(0,0,255,0)}
+			7.99%{background-color:rgba(0,0,255,0)}
+			8%{background-color:rgba(0,0,255,1)}
+			
+			11%{background-color:rgba(0,0,255,1.00)}
+			11.01%{background-color:rgba(0,0,255,0)}
+			11.99%{background-color:rgba(0,0,255,0)}
+			12%{background-color:rgba(0,0,255,1)}
+			
+			15%{background-color:rgba(0,0,255,1.00)}
+			15.01%{background-color:rgba(0,0,255,0)}
+			15.99%{background-color:rgba(0,0,255,0)}
+			16%{background-color:rgba(0,0,255,1)}
+			
+			19%{background-color:rgba(0,0,255,1.00)}
+			19.01%{background-color:rgba(0,0,255,0)}
+			19.99%{background-color:rgba(0,0,255,0)}
+			20%{background-color:rgba(0,0,255,1)}
+			
+			26%{background-color:rgba(0,0,255,1.00)}
+			26.01%{background-color:rgba(0,0,255,0)}
+			32.99%{background-color:rgba(0,0,255,0)}
+			
+			
+			33%{background-color:rgba(0,0,255,1)}
+			39%{background-color:rgba(0,0,255,1)}
+			39.01%{background-color:rgba(0,0,255,0)}
+			44.99%{background-color:rgba(0,0,255,0)}
+			
+			
+			45%{background-color:rgba(0,0,255,1)}
+			48%{background-color:rgba(0,0,255,1)}
+			48.01%{background-color:rgba(0,0,255,0)}
+			48.99%{background-color:rgba(0,0,255,0)}
+			49%{background-color:rgba(0,0,255,1)}
+			
+			52%{background-color:rgba(0,0,255,1)}
+			52.01%{background-color:rgba(0,0,255,0)}
+			52.99%{background-color:rgba(0,0,255,0)}
+			53%{background-color:rgba(0,0,255,1)}
+			
+			56%{background-color:rgba(0,0,255,1)}
+			56.01%{background-color:rgba(0,0,255,0)}
+			56.99%{background-color:rgba(0,0,255,0)}
+			57%{background-color:rgba(0,0,255,1)}
+			
+			60%{background-color:rgba(0,0,255,1)}
+			60.01%{background-color:rgba(0,0,255,0)}
+			60.99%{background-color:rgba(0,0,255,0)}
+			61%{background-color:rgba(0,0,255,1)}
+			
+			64%{background-color:rgba(0,0,255,1)}
+			64.01%{background-color:rgba(0,0,255,0)}
+			69.99%{background-color:rgba(0,0,255,0)}
+			
+			
+			70%{background-color:rgba(0,0,255,1)}
+			73%{background-color:rgba(0,0,255,1)}
+			73.01%{background-color:rgba(0,0,255,0)}
+			73.99%{background-color:rgba(0,0,255,0)}
+			74%{background-color:rgba(0,0,255,1)}
+			
+			80%{background-color:rgba(0,0,255,1)}
+			80.01%{background-color:rgba(0,0,255,0)}
+			85.99%{background-color:rgba(0,0,255,0)}
+			
+			
+			86%{background-color:rgba(0,0,255,1)}
+			89%{background-color:rgba(0,0,255,1)}
+			89.01%{background-color:rgba(0,0,255,0)}
+			89.99%{background-color:rgba(0,0,255,0)}
+			90%{background-color:rgba(0,0,255,1)}
+			
+			96%{background-color:rgba(0,0,255,1)}
+			96.01%{background-color:rgba(0,0,255,0)}
+			96.99%{background-color:rgba(0,0,255,0)}
+			100%{background-color:rgba(0,0,255,0)}
+		}
+		
+	#txt{position:absolute; top:10px; left:1050px; font-family: 'SM견출고딕 Std Regular', serif; font-size:25px;}	
+	#txt2{position:absolute; top: 0px; left:1150px; font-family: 'SM견출고딕 Std Regular', '한컴돋움'; font-size:25px; }
+	#txt3{position:absolute; top: 37px; left:1150px; font-family: 'SM견출고딕 Std Regular', '한컴돋움'; font-size:25px; }
+		
+	#mokcha{width:0px; height: 0px; padding-top:10px; position:absolute; top:300px;left:1300px; background-color:yellow; font-family: 'SM견출고딕 Std Regular', '한컴돋움'; text-align:center; color:rgba(0,0,0,0.00);}
+		
+	a:link { color: black; text-decoration: none;}
+    a:visited { color: black; text-decoration: none;}
+	</style>
+</head>
+<body>
+	<div id="mux">
+		<audio id="mu" src="img/musicIn.mp3" loop="" preload="auto"></audio>
+	</div>
+
+	<div id="whiteBut" style="display: block; position: absolute; cursor: pointer;" onclick="myFunction()"></div>
+	
+	<div id="blueBut" style="display: block; position: absolute; cursor: pointer;" onclick="myFunction()"></div>
+	
+	<div id="yelloBut" style="display: block; position: absolute; cursor: pointer;" onclick="myFunction()"></div>
+
+	<img src="img/gli.gif" id="imgBox">
+
+	<img src="img/2.gif" class="drag" id="oImage" style="width: 650px; left: 750px; top: 80px; display: block; position: absolute; cursor: pointer;" onmousewheel="Picture()">
+	
+	<a href="1-3.html"><img src="img/girl.gif" class="drag" id="oImage" style="width: 500px; left: 400px; top: 341px; display: block; position: absolute; cursor: pointer;" onmousewheel="Picture()"></a>
+
+	<div id="sa">4</div>
+	<div id="gong">0</div>
+	<div id="oo">5</div>
+	<div id="il">1</div>
+	<div id="ill">1</div>
+	
+	<div id="blackBox"></div>
+	
+	<div id="txt"></div>
+	<div id="txt2"></div>
+	<div id="txt3"></div>
+	
+	<div id="ziry"> <span style="background-color:#00FEFE">지령(指令)</span> </div>
+	<div id="ziry2"> <span style="background-color:#FE9D00">비밀공작에서 흔히<br>사용하는 용어로<br>비밀리에 특정<br>대상자나 기관에게<br>특수한 행동이나<br>방침을 명령하는 것</span> </div>	
+	
+	<img src="img/morse.jpg" id="morse" class="drag" style="left: 550px; top: 130px; display: block; position: absolute; cursor: pointer;" onmousewheel="Picture()">
+	
+	<div id="mokcha" class="drag" >목 차<ul><a href="index.html"><li>1번 문자</li></a><a href="index.html"><li>2번 문자</li></a><a href="1-1.html"><li>3번 문자</li></a><a href="1-4-2.html"><li>4번 문자</li></a><a href="1-4-2.html"><li>5번 문자</li></a><a href="1-5.html"><li>6번 문자</li></a><a href="1-5.html"><li>7번 문자</li></a><a href="1-1.html"><li>8번 문자</li></a><a href="1-4-2.html"><li>9번 문자</li></a><a href="examples/Untitled-4.html"><li>기록지</li></a></ul></div>
+	<script type="text/javascript">
+	//아래 코드를 삽입하면 drag 클래스가 적용된 객체들은 드래그가 가능합니다.
+	(function(){
+		var d = false;
+		var target,dx,dy;
+		var t = document.getElementsByClassName("drag");
+		for(var i=0; i<t.length; i++){
+			t[i].style.display = "block";
+			t[i].style.position = "absolute";
+			t[i].style.cursor = "pointer";
+			t[i].ondragstart = function(e){e.preventDefault();};
+			t[i].onmousedown = function(e){ d = true; dx = e.offsetX; dy = e.offsetY; target = e.target;}
+			t[i].onmouseup = function(){ d = false;}
+			window.onmousemove = function(e){ 
+				if(d){ target.style.left = (e.clientX - dx) + "px";
+					target.style.top = (e.clientY - dy) + "px";}
+			}
+		}
+	})();
+
+	
+	var toggle = "off";
+		whiteBut.onclick = function(){
+		if(toggle == "off"){
+		blackBox.style.backgroundColor="rgba(255,255,255,0.0)";
+		blackBox.style.zIndex="-999";
+		document.body.style.backgroundColor="white";
+		ziry.style.color="black";
+		ziry2.style.color="black";
+		mu.play();
+		toggle = "on";
+				}
+		else {	
+		blackBox.style.backgroundColor="black";
+		blackBox.style.zIndex="996";
+		document.body.style.backgroundColor="black";
+		ziry.style.color="white";
+		ziry2.style.color="white";
+		mu.pause();
+		toggle = "off";
+				}
+		}
+		
+	var toggle = "off";
+		yelloBut.onclick = function(){
+		if(toggle == "off"){
+		mokcha.style.width="150px";
+		mokcha.style.height="auto";
+		mokcha.style.color="black";
+		mokcha.style.zIndex="996";
+		toggle = "on";
+				}
+		else {	
+		mokcha.style.width="0px";
+		mokcha.style.height="0px";
+		mokcha.style.color="rgba(0,0,0,0.00)";
+		mokcha.style.zIndex="-996";
+		toggle = "off";
+				}
+		}
+	
+	var toggle = "off";
+		blueBut.onclick = function(){
+		if(toggle == "off"){
+		morse.style.width="550px";
+		morse.style.height="360px";
+		morse.style.zIndex="996";
+		toggle = "on";
+				}
+		else {	
+		morse.style.width="0px";
+		morse.style.height="0px";
+		morse.style.zIndex="-996";
+		toggle = "off";
+				}
+		}
+
+		setInterval(function(){
+  $(".blink").toggle();
+}, 500);
+		
+		var retVal = prompt("*축하드립니다!*\n지금부터 본 페이지의 문서들을 잘 참고하시어\n부디 지령을 해석할 수 있기를 바랍니다!\n참고: 이 문자들은 모두 손상되었읍니다. ", "성명");
+		
+		document.getElementById('txt2').innerHTML="성명: "+retVal+" ";
+		
+		var retVat = prompt("", "연령");
+		document.getElementById('txt3').innerHTML="연령: "+retVat+" 세";
+		
+ 		alert(" 괪괥괨괱괪 " +  "" );
+
+		function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    "현재 시각은 " + h + ":" + m + ":" + s + " 초 입니다.";
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  
+    return i;
+}
+	</script>
+
+</body></html>

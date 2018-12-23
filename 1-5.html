@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>40163</title>
+	<style>
+	@import url('https://fonts.googleapis.com/css?family=Song+Myung');
+	@FONT-FACE{
+	font-family: "휴먼엑스포", "한컴돋움", "SM견출고딕 Std Regular", "SM견출명조 Std Regular";
+	src: url('HMFMMUEX_0.ttf','HDOTUM_0.ttf','SMKGothicStd-Regular.otf','SMKMyungJoStd-Regular.otf');
+	}
+	body{animation:wow 0.5s linear infinite}
+		
+	#ziry{position: absolute; top:0; left:0; font-family: 'SM견출명조 Std Regular', serif; font-size: 100px;font-weight:700;line-height:120px;}
+	#ziry2{width:500px; height:500px;position: absolute; top: 250px; left:0; font-family: 'SM견출명조 Std Regular', serif; font-size: 50px; font-weight:500; line-height:70px;}
+	#myCanvas { width:360px; height: auto; position:absolute; top:130px; left:39.5%;}
+		#center{width:365px; height:275px; position: absolute; top:110px; left:39.1%; background-color:black;}
+	#com{width:630px; height:auto; position:absolute; left:30%;}
+		
+		@keyframes wow{
+			0%{background-color:yellow}
+			25%{background-color:red}
+			50%{background-color:blue}
+			75%{background-color:green}
+			100%{background-color:yellow}
+		}
+	</style>
+</head>
+
+<body>
+	<img src = "img/com.png" id="com" onclick="myFunction()">
+	<div id = "center"></div>
+	<canvas id="myCanvas" width="480" height="320"></canvas>
+	
+	
+	<script type="text/javascript" src="game1.js">
+	</script>
+	
+</body>
+</html>
+
